@@ -8,21 +8,22 @@
     <title>Painel Administrativo</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 </head>
 <body>
     <div class="d-flex" id="wrapper">
     <!--SIDEBAR-->
         <div id="sidebar-wrapper">
             <div class="sidebar-heading">
-                <span>Painel da SON</span>
+                    <img src="https://github.com/schoolofnetcom/pp-painel-administrativo-com-bootstrap-4/blob/master/03/logo.png?raw=true" alt=""><span>Painel da SON</span>
             </div>
                 <div class="list-group list-group-flush border-right">
-                    <a href="#" class="list-group-item list-group-item-action">Inicio</a>
-                    <a href="#" class="list-group-item list-group-item-action">Funcionários</a>
-                    <a href="#" class="list-group-item list-group-item-action">Produtos</a>
-                    <a href="#" class="list-group-item list-group-item-action">Categorias</a>
-                    <a href="#" class="list-group-item list-group-item-action">Fornecedores</a>
-                    <a href="#" class="list-group-item list-group-item-action">Relatórios</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-home"></i>Inicio</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-users"></i>Funcionários</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-box-open"></i>Produtos</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-sitemap"></i>Categorias</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-people-carry"></i>Fornecedores</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-chart-bar"></i>Relatórios</a>
                 </div>
         </div>
 
@@ -30,6 +31,9 @@
     <!--CONTEUDO-->
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light" id="son-navbar">
+                <span id="menu-toggle" class="mr-auto">
+                    <img src="https://github.com/schoolofnetcom/pp-painel-administrativo-com-bootstrap-4/blob/master/03/logo.png?raw=true" alt="" class="mx-auto d-block">
+                </span>
                 <a href="#" class="navbar-brand" id="navbar-site-title">Painel</a>
 
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#son-navbar-collapse"
@@ -57,5 +61,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <!-- JS DO BOOTSTRAP-->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $("#menu-toggle").click(function(event){
+            event.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
 </body>
 </html>
